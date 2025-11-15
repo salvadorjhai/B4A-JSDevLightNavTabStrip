@@ -1,0 +1,111 @@
+﻿Version=7
+NumberOfModules=1
+Module1=Starter
+Build1=Default,b4a.example.navtabstrip
+ManifestCode='This code will be applied to the manifest file during compilation.~\n~'You do not need to modify it in most cases.~\n~'See this link for for more information: http://www.b4x.com/forum/showthread.php?p=78136~\n~AddManifestText(~\n~<uses-sdk android:minSdkVersion="5" android:targetSdkVersion="19"/>~\n~<supports-screens android:largeScreens="true" ~\n~    android:normalScreens="true" ~\n~    android:smallScreens="true" ~\n~    android:anyDensity="true"/>)~\n~SetApplicationAttribute(android:icon, "@drawable/icon")~\n~SetApplicationAttribute(android:label, "$LABEL$")~\n~'End of default text.~\n~
+IconFile=
+NumberOfFiles=1
+File1=1.bal
+NumberOfLibraries=3
+Library1=core
+Library2=jsdevlightnavtabstrip
+Library3=ahviewpager
+@EndOfDesignText@
+#Region  Project Attributes 
+	#ApplicationLabel: JSDevLightNavTabStrip
+	#VersionCode: 1
+	#VersionName: 
+	'SupportedOrientations possible values: unspecified, landscape or portrait.
+	#SupportedOrientations: unspecified
+	#CanInstallToExternalStorage: False
+#End Region
+
+#Region  Activity Attributes 
+	#FullScreen: False
+	#IncludeTitle: True
+#End Region
+
+Sub Process_Globals
+	'These global variables will be declared once when the application starts.
+	'These variables can be accessed from all modules.
+
+End Sub
+
+Sub Globals
+	'These global variables will be redeclared each time the activity is created.
+	'These variables can only be accessed from this module.
+	Dim tab1 As JSDevLightNavTabStrip
+	Dim tab2 As JSDevLightNavTabStrip
+	Private AHViewPager1 As AHViewPager
+	Private AHViewPager2 As AHViewPager
+End Sub
+
+Sub Activity_Create(FirstTime As Boolean)
+	'Do not forget to load the layout file created with the visual designer. For example:
+	Activity.LoadLayout("1")
+	
+	'-- Sample 1 (Top)
+	tab1.Titles = Array As String("Videos", "Images", "Song")
+	tab1.ActiveColor = 0xFFE91E63
+	tab1.StripColor = 0xFFE91E63	
+	tab1.TabIndex = 0
+
+	'-- Sample 1 (Bottom)
+	tab2.Titles = Array As String("Eat", "Sleep", "Conquer", "Repeat")
+	tab2.TitleSize = 13dip
+	tab2.TabIndex = 4
+	
+	'-- Sample 2 (Bottom)
+	Dim tab3 As JSDevLightNavTabStrip
+	tab3.Initialize("tab3")
+	Activity.AddView(tab3, 0dip, 100%y - 56dip, 100%x, 56dip)	
+	tab3.Color = Colors.White
+	tab3.Titles = Array As String("Home", "Think", "Design", "Animate")
+	tab3.ActiveColor = 0xFF8BC34A
+	tab3.InactiveColor = Colors.LightGray
+	tab3.StripType = tab3.STRIP_TYPE_LINE
+	tab3.StripGravity = tab3.STRIP_GRAVITY_BOTTOM
+	tab3.StripColor = 0xFF8BC34A	
+	'tab3.TabIndex = 1
+	
+	Dim pnl1 As Panel
+	pnl1.Initialize("")
+	pnl1.Color = Colors.Green
+	
+	Dim pnl2 As Panel
+	pnl2.Initialize("")
+	pnl2.Color = Colors.Yellow
+	
+	Dim pnl3 As Panel
+	pnl3.Initialize("")
+	pnl3.Color = Colors.Blue	
+	
+	Dim pnl4 As Panel
+	pnl4.Initialize("")
+	pnl4.Color = Colors.Magenta
+	
+	Dim container As AHPageContainer
+	container.Initialize
+	container.AddPage(pnl1, "Home")
+	container.AddPage(pnl2, "Think")
+	container.AddPage(pnl3, "Design")
+	container.AddPage(pnl4, "Animate")
+	
+	AHViewPager1.PageContainer = container
+	tab2.ViewPager = AHViewPager1
+	tab2.TabIndex = 1
+	AHViewPager1.GotoPage (1, True)
+	
+End Sub
+
+Sub Activity_Resume
+
+End Sub
+
+Sub Activity_Pause (UserClosed As Boolean)
+
+End Sub
+
+Sub tab1_OnEndTabSelected(title As String, index As Int)
+
+End Sub

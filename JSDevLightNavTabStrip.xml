@@ -1,0 +1,465 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<root>
+    <doclet-version-NOT-library-version>1.05</doclet-version-NOT-library-version>
+    <class>
+        <name>com.salvadorjhai.widgets.JSDevLightNavTabStrip</name>
+        <shortname>JSDevLightNavTabStrip</shortname>
+        <comment>Navigation tab strip with smooth interaction. Wrapped:
+ https://github.com/DevLight-Mobile-Agency/NavigationTabStrip Credits to:
+ DevLight-Mobile-Agency
+ 
+ Sample 1: &lt;code&gt;
+ 	Dim tab1 As JSDevLightNavTabStrip
+ 	tab1.Initialize("tab1")
+	Activity.AddView(tab1, 0dip, 0dip, 100%x, 56dip)	
+ 	tab1.Titles = Array As String("Videos", "Images", "Song")
+ 	tab1.ActiveColor = 0xFFE91E63
+	tab1.StripColor = 0xFFE91E63	
+ 	tab1.TabIndex = 0&lt;/code&gt;
+ 
+ Sample 2:&lt;code&gt;
+ 	Dim tab3 As JSDevLightNavTabStrip
+	tab3.Initialize("tab3")
+	Activity.AddView(tab3, 0dip, 100%y - 56dip, 100%x, 56dip)	
+	tab3.Color = Colors.White
+	tab3.Titles = Array As String("Home", "Think", "Design", "Animate")
+	tab3.ActiveColor = 0xFF8BC34A
+	tab3.InactiveColor = Colors.LightGray
+	tab3.StripType = tab3.STRIP_TYPE_LINE
+	tab3.StripGravity = tab3.STRIP_GRAVITY_BOTTOM
+	tab3.StripColor = 0xFF8BC34A	
+	tab3.TabIndex = 0&lt;/code&gt;</comment>
+        <objectwrapper>com.gigamole.navigationtabstrip.NavigationTabStrip</objectwrapper>
+        <owner>activity</owner>
+        <event>OnStartTabSelected(title As String, index As int)</event>
+        <event>OnEndTabSelected(title As String, index As int)</event>
+        <method>
+            <name>BringToFront</name>
+            <comment></comment>
+            <returntype>void</returntype>
+        </method>
+        <method>
+            <name>RequestFocus</name>
+            <comment></comment>
+            <returntype>boolean</returntype>
+        </method>
+        <method>
+            <name>RemoveView</name>
+            <comment></comment>
+            <returntype>void</returntype>
+        </method>
+        <method>
+            <name>SetBackgroundImage</name>
+            <comment></comment>
+            <returntype>void</returntype>
+            <parameter>
+                <name>arg0</name>
+                <type>android.graphics.Bitmap</type>
+            </parameter>
+        </method>
+        <method>
+            <name>Invalidate3</name>
+            <comment></comment>
+            <returntype>void</returntype>
+            <parameter>
+                <name>arg0</name>
+                <type>int</type>
+            </parameter>
+            <parameter>
+                <name>arg1</name>
+                <type>int</type>
+            </parameter>
+            <parameter>
+                <name>arg2</name>
+                <type>int</type>
+            </parameter>
+            <parameter>
+                <name>arg3</name>
+                <type>int</type>
+            </parameter>
+        </method>
+        <method>
+            <name>Invalidate2</name>
+            <comment></comment>
+            <returntype>void</returntype>
+            <parameter>
+                <name>arg0</name>
+                <type>android.graphics.Rect</type>
+            </parameter>
+        </method>
+        <method>
+            <name>IsInitialized</name>
+            <comment></comment>
+            <returntype>boolean</returntype>
+        </method>
+        <method>
+            <name>Initialize</name>
+            <comment></comment>
+            <returntype>void</returntype>
+            <parameter>
+                <name>ba</name>
+                <type>anywheresoftware.b4a.BA</type>
+            </parameter>
+            <parameter>
+                <name>eventName</name>
+                <type>java.lang.String</type>
+            </parameter>
+        </method>
+        <method>
+            <name>Deselect</name>
+            <comment>Deselect.</comment>
+            <returntype>void</returntype>
+        </method>
+        <method>
+            <name>Invalidate</name>
+            <comment></comment>
+            <returntype>void</returntype>
+        </method>
+        <method>
+            <name>SetLayout</name>
+            <comment></comment>
+            <returntype>void</returntype>
+            <parameter>
+                <name>arg0</name>
+                <type Pixel="true">int</type>
+            </parameter>
+            <parameter>
+                <name>arg1</name>
+                <type Pixel="true">int</type>
+            </parameter>
+            <parameter>
+                <name>arg2</name>
+                <type Pixel="true">int</type>
+            </parameter>
+            <parameter>
+                <name>arg3</name>
+                <type Pixel="true">int</type>
+            </parameter>
+        </method>
+        <method>
+            <name>DesignerCreateView</name>
+            <comment></comment>
+            <returntype>void</returntype>
+            <parameter>
+                <name>paramPanelWrapper</name>
+                <type>anywheresoftware.b4a.objects.PanelWrapper</type>
+            </parameter>
+            <parameter>
+                <name>paramLabelWrapper</name>
+                <type>anywheresoftware.b4a.objects.LabelWrapper</type>
+            </parameter>
+            <parameter>
+                <name>paramMap</name>
+                <type>anywheresoftware.b4a.objects.collections.Map</type>
+            </parameter>
+        </method>
+        <method>
+            <name>SetColorAnimated</name>
+            <comment></comment>
+            <returntype>void</returntype>
+            <parameter>
+                <name>arg0</name>
+                <type>int</type>
+            </parameter>
+            <parameter>
+                <name>arg1</name>
+                <type>int</type>
+            </parameter>
+            <parameter>
+                <name>arg2</name>
+                <type>int</type>
+            </parameter>
+        </method>
+        <method>
+            <name>SetLayoutAnimated</name>
+            <comment></comment>
+            <returntype>void</returntype>
+            <parameter>
+                <name>arg0</name>
+                <type>int</type>
+            </parameter>
+            <parameter>
+                <name>arg1</name>
+                <type Pixel="true">int</type>
+            </parameter>
+            <parameter>
+                <name>arg2</name>
+                <type Pixel="true">int</type>
+            </parameter>
+            <parameter>
+                <name>arg3</name>
+                <type Pixel="true">int</type>
+            </parameter>
+            <parameter>
+                <name>arg4</name>
+                <type Pixel="true">int</type>
+            </parameter>
+        </method>
+        <method>
+            <name>SetVisibleAnimated</name>
+            <comment></comment>
+            <returntype>void</returntype>
+            <parameter>
+                <name>arg0</name>
+                <type>int</type>
+            </parameter>
+            <parameter>
+                <name>arg1</name>
+                <type>boolean</type>
+            </parameter>
+        </method>
+        <method>
+            <name>SendToBack</name>
+            <comment></comment>
+            <returntype>void</returntype>
+        </method>
+        <property>
+            <name>Enabled</name>
+            <returntype>boolean</returntype>
+            <parameter>
+                <name>arg0</name>
+                <type>boolean</type>
+            </parameter>
+            <comment></comment>
+        </property>
+        <property>
+            <name>Visible</name>
+            <returntype>boolean</returntype>
+            <parameter>
+                <name>arg0</name>
+                <type>boolean</type>
+            </parameter>
+            <comment></comment>
+        </property>
+        <property>
+            <name>StripType</name>
+            <returntype>int</returntype>
+            <parameter>
+                <name>stripType</name>
+                <type>int</type>
+            </parameter>
+            <comment>Gets the strip type.</comment>
+        </property>
+        <property>
+            <name>StripFactor</name>
+            <returntype>float</returntype>
+            <parameter>
+                <name>factor</name>
+                <type>float</type>
+            </parameter>
+            <comment>Gets the strip factor.</comment>
+        </property>
+        <property>
+            <name>Background</name>
+            <returntype>android.graphics.drawable.Drawable</returntype>
+            <parameter>
+                <name>arg0</name>
+                <type>android.graphics.drawable.Drawable</type>
+            </parameter>
+            <comment></comment>
+        </property>
+        <property>
+            <name>StripColor</name>
+            <returntype>int</returntype>
+            <parameter>
+                <name>color</name>
+                <type>int</type>
+            </parameter>
+            <comment>Gets the strip color.</comment>
+        </property>
+        <property>
+            <name>Tag</name>
+            <returntype>java.lang.Object</returntype>
+            <parameter>
+                <name>arg0</name>
+                <type>java.lang.Object</type>
+            </parameter>
+            <comment></comment>
+        </property>
+        <property>
+            <name>InactiveColor</name>
+            <returntype>int</returntype>
+            <parameter>
+                <name>inactiveColor</name>
+                <type>int</type>
+            </parameter>
+            <comment>Gets the inactive color.</comment>
+        </property>
+        <property>
+            <name>Width</name>
+            <returntype>int</returntype>
+            <parameter>
+                <name>arg0</name>
+                <type Pixel="true">int</type>
+            </parameter>
+            <comment></comment>
+        </property>
+        <property>
+            <name>StripGravity</name>
+            <returntype>int</returntype>
+            <parameter>
+                <name>stripGravity</name>
+                <type>int</type>
+            </parameter>
+            <comment>Gets the strip gravity.</comment>
+        </property>
+        <property>
+            <name>StripWeight</name>
+            <parameter>
+                <name>stripWeight</name>
+                <type>float</type>
+            </parameter>
+            <comment>Sets the strip weight.</comment>
+        </property>
+        <property>
+            <name>Top</name>
+            <returntype>int</returntype>
+            <parameter>
+                <name>arg0</name>
+                <type Pixel="true">int</type>
+            </parameter>
+            <comment></comment>
+        </property>
+        <property>
+            <name>Parent</name>
+            <returntype>java.lang.Object</returntype>
+            <comment></comment>
+        </property>
+        <property>
+            <name>TabIndex</name>
+            <returntype>int</returntype>
+            <parameter>
+                <name>index</name>
+                <type>int</type>
+            </parameter>
+            <comment>Gets the tab index.</comment>
+        </property>
+        <property>
+            <name>ViewPager</name>
+            <parameter>
+                <name>viewPager</name>
+                <type>java.lang.Object</type>
+            </parameter>
+            <comment>Sets the view pager.</comment>
+        </property>
+        <property>
+            <name>TitleSize</name>
+            <returntype>float</returntype>
+            <parameter>
+                <name>titleSize</name>
+                <type>float</type>
+            </parameter>
+            <comment>Gets the title size.</comment>
+        </property>
+        <property>
+            <name>Height</name>
+            <returntype>int</returntype>
+            <parameter>
+                <name>arg0</name>
+                <type Pixel="true">int</type>
+            </parameter>
+            <comment></comment>
+        </property>
+        <property>
+            <name>Left</name>
+            <returntype>int</returntype>
+            <parameter>
+                <name>arg0</name>
+                <type Pixel="true">int</type>
+            </parameter>
+            <comment></comment>
+        </property>
+        <property>
+            <name>Color</name>
+            <parameter>
+                <name>arg0</name>
+                <type>int</type>
+            </parameter>
+            <comment></comment>
+        </property>
+        <property>
+            <name>AnimationDuration</name>
+            <returntype>int</returntype>
+            <parameter>
+                <name>animationDuration</name>
+                <type>int</type>
+            </parameter>
+            <comment>Gets the animation duration.</comment>
+        </property>
+        <property>
+            <name>Typeface</name>
+            <returntype>android.graphics.Typeface</returntype>
+            <parameter>
+                <name>typeface</name>
+                <type>android.graphics.Typeface</type>
+            </parameter>
+            <comment>Gets the typeface.</comment>
+        </property>
+        <property>
+            <name>CornersRadius</name>
+            <returntype>float</returntype>
+            <parameter>
+                <name>cornersRadius</name>
+                <type>float</type>
+            </parameter>
+            <comment>Gets the corners radius.</comment>
+        </property>
+        <property>
+            <name>ActiveColor</name>
+            <returntype>int</returntype>
+            <parameter>
+                <name>activeColor</name>
+                <type>int</type>
+            </parameter>
+            <comment>Gets the active color.</comment>
+        </property>
+        <property>
+            <name>Titles</name>
+            <returntype>java.lang.String[]</returntype>
+            <parameter>
+                <name>titles</name>
+                <type>java.lang.String[]</type>
+            </parameter>
+            <comment>Gets the titles.</comment>
+        </property>
+        <field>
+            <name>PAGE_SCROLL_STATE_IDLE</name>
+            <comment></comment>
+            <returntype>int</returntype>
+        </field>
+        <field>
+            <name>STRIP_GRAVITY_BOTTOM</name>
+            <comment>The Constant STRIP_GRAVITY_BOTTOM.</comment>
+            <returntype>int</returntype>
+        </field>
+        <field>
+            <name>PAGE_SCROLL_STATE_DRAGGING</name>
+            <comment></comment>
+            <returntype>int</returntype>
+        </field>
+        <field>
+            <name>STRIP_GRAVITY_TOP</name>
+            <comment>The Constant STRIP_GRAVITY_TOP.</comment>
+            <returntype>int</returntype>
+        </field>
+        <field>
+            <name>PAGE_SCROLL_STATE_SETTLING</name>
+            <comment></comment>
+            <returntype>int</returntype>
+        </field>
+        <field>
+            <name>STRIP_TYPE_LINE</name>
+            <comment>The Constant STRIP_TYPE_LINE.</comment>
+            <returntype>int</returntype>
+        </field>
+        <field>
+            <name>STRIP_TYPE_POINT</name>
+            <comment>The Constant STRIP_TYPE_POINT.</comment>
+            <returntype>int</returntype>
+        </field>
+    </class>
+    <version>0.3</version>
+    <author>salvadorjhai</author>
+    <dependsOn>JSDLnavigationtabstrip.aar</dependsOn>
+    <dependsOn>android-support-v4</dependsOn>
+</root>
